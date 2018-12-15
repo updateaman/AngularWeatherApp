@@ -1,0 +1,17 @@
+<div>
+  <input type="text" name="city"/>
+</div>
+<ul>
+  <li>
+    <a href="city/london">London UK</a>
+  </li>
+  <li>
+      <a href="city/karachi">Karachi</a>
+    </li>
+    <li>
+        <a href="city/melbourne">Melbourne</a>
+      </li>
+      <li *ngFor="let city of cities">
+          <a href="city/{{city.name}}">{{city.name}}</a>
+      </li>
+</ul>
