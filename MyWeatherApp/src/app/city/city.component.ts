@@ -17,7 +17,8 @@ export class CityComponent implements OnInit {
   mainWeather: string[] = [];
 
   ngOnInit() {
-    const city = this.route.snapshot.paramMap.get('name');
+    const city = this.route.snapshot.paramMap.get('id');
+    console.log(city);
 
     this.weatherService.getCityWeather(city).subscribe((data: WeatherModel) => {
       this.cityWeather = data;
